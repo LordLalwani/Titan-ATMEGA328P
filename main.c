@@ -8,8 +8,8 @@
 
 #include <avr/io.h>
 #include <util/delay.h>
-#include "mcu-config.h"
-#include "debug-helpers.h"
+#include "src/header-files/debug-helpers.h"
+#include "src/header-files/mcu-config.h"
 
 #define BUAD 9600
 #define BRC ((F_CPU/16/BUAD)-1)
@@ -28,6 +28,6 @@ int main(void) {
         // Adds single data character to USART I/O data register
         // Once data is added here it automatically gets transmitted
         UDR0 = 'T';
-        toggleLedOnPort(PORTC1);
+        toggleLedOnPort(PORTC2);
     }
 }
