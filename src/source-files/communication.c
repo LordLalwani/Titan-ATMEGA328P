@@ -11,11 +11,10 @@
 #include "../header-files/debug-helpers.h"
 #include <avr/interrupt.h>
 
+void USART_init(void) {
 
 #define BUAD 115200
 #define BRC ((F_CPU/16/BUAD)-1)
-
-void USART_init(void) {
     //Set baud rate */
     UBRR0H = (unsigned char) (BRC >> 8);
     UBRR0L = (unsigned char) BRC;
@@ -41,4 +40,11 @@ void transmitChar(unsigned char data) {
     /* Put data into buffer, sends the data */
     UDR0 = data;
 
+}
+
+void putString(char* stringPtr) {
+    while (*stringPtr != 0x00) {
+        transmitChar(*stringPtr);
+        stringPtr++;
+    }
 }

@@ -15,6 +15,7 @@ extern "C" {
 void USART_init(void);
 unsigned char receiveChar( void );
 void transmitChar( unsigned char data );
+void putString(char* stringPtr);
 
 #ifdef	__cplusplus
 }

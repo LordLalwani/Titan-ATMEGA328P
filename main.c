@@ -15,10 +15,12 @@ int main(void) {
     USART_init();
 
     while (1) {
-        transmitChar(1);
-//        char i = receiveChar();
-//        if (i == 1) {
-//            toggleLedOnPortC(PORTC4);
-//        }
+        if (receiveChar() == 1) {
+            transmitChar('1');
+            toggleLedOnPortC(PORTC4);
+        } else {
+            char String[] = "test";
+            putString(String);
+        }
     }
 }

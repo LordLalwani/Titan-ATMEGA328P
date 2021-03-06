@@ -12,13 +12,13 @@
 void toggleLedOnPortC(int port) {
 
 #define LED_BIT_LOCATION  port
-#define LED_BIT_MASK (1 << LED_BIT_LOCATION)  
+#define LED_BIT_MASK (1 << LED_BIT_LOCATION)
 
     // Data direction register for LED
     DDRC = LED_BIT_MASK;
     PORTC = 0;
-    _delay_ms(500);
+    _delay_ms(250);
     PORTC = LED_BIT_MASK;
-    _delay_ms(500);
-     PORTC = 0;
+    _delay_ms(250);
+    PORTC = 0;
 }
