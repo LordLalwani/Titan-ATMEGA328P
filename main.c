@@ -9,25 +9,16 @@
 #include <avr/io.h>
 #include <util/delay.h>
 #include "src/header-files/debug-helpers.h"
-#include "src/header-files/mcu-config.h"
-
-#define BUAD 9600
-#define BRC ((F_CPU/16/BUAD)-1)
-
+#include "src/header-files/communication.h"
 
 int main(void) {
-    
-    // Settings up USART
-    UBRR0H = (BRC >> 8);
-    UBRR0L = BRC;   
-    
-    UCSR0B = (1 << TXEN0);
-    UCSR0C = (1 << UCSZ01) | (1 << UCSZ00);
+    USART_init();
 
     while (1) {
-        // Adds single data character to USART I/O data register
-        // Once data is added here it automatically gets transmitted
-        UDR0 = 'T';
-        toggleLedOnPort(PORTC2);
+        transmitChar(1);
+//        char i = receiveChar();
+//        if (i == 1) {
+//            toggleLedOnPortC(PORTC4);
+//        }
     }
 }

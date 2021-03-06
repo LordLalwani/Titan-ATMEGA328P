@@ -13,7 +13,7 @@ extern "C" {
 #endif
 
     
-void toggleLedOnPort(int port);
+void toggleLedOnPortC(int port);
 
 
 

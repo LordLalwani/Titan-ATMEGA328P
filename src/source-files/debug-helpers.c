@@ -9,16 +9,16 @@
 #include <avr/io.h>
 #include <util/delay.h>
 
-void toggleLedOnPort(int port) {
+void toggleLedOnPortC(int port) {
 
 #define LED_BIT_LOCATION  port
 #define LED_BIT_MASK (1 << LED_BIT_LOCATION)  
 
     // Data direction register for LED
     DDRC = LED_BIT_MASK;
-    // toggles LED to signal working transmission
     PORTC = 0;
     _delay_ms(500);
     PORTC = LED_BIT_MASK;
     _delay_ms(500);
+     PORTC = 0;
 }

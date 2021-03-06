@@ -12,10 +12,12 @@
 extern "C" {
 #endif
 
+void USART_init(void);
+unsigned char receiveChar( void );
+void transmitChar( unsigned char data );
 
 #ifdef	__cplusplus
 }
 #endif
 
 #endif	/* COMMUNICATION_H */
-
