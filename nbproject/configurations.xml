@@ -4,6 +4,9 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>mcu-config.h</itemPath>
+      <itemPath>communication.h</itemPath>
+      <itemPath>debug-helpers.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -12,7 +15,9 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>main.cpp</itemPath>
+      <itemPath>main.c</itemPath>
+      <itemPath>communication.c</itemPath>
+      <itemPath>debug-helpers.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -20,12 +25,15 @@
       <itemPath>Makefile</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>externalLib</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="default" type="2">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
-        <targetDevice>ATtiny85</targetDevice>
+        <targetDevice>ATmega328P</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>AtmelIceTool</platformTool>
@@ -34,7 +42,7 @@
         <platform>4</platform>
       </toolsSet>
       <packs>
-        <pack name="ATtiny_DFP" vendor="Microchip" version="2.5.116"/>
+        <pack name="ATmega_DFP" vendor="Microchip" version="2.3.126"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -83,7 +91,7 @@
         <property key="call-prologues" value="false"/>
         <property key="default-bitfield-type" value="true"/>
         <property key="default-char-type" value="true"/>
-        <property key="extra-include-directories" value=""/>
+        <property key="extra-include-directories" value="externalLib"/>
         <property key="garbage-collect-data" value="true"/>
         <property key="garbage-collect-functions" value="true"/>
         <property key="inhibit-all" value="false"/>
@@ -167,7 +175,7 @@
       <AtmelIceTool>
         <property key="AutoSelectMemRanges" value="auto"/>
         <property key="communication.activationmode" value="nohv"/>
-        <property key="communication.interface" value="dw"/>
+        <property key="communication.interface" value="isp"/>
         <property key="communication.speed" value="0.125"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
         <property key="firmware.path"
@@ -191,6 +199,8 @@
         <property key="memories.programmemory.ranges" value="0-fff"/>
         <property key="memories.rww" value="true"/>
         <property key="poweroptions.powerenable" value="false"/>
+        <property key="programmerToGoFilePath"
+                  value="/Users/s121003/Development/personal/MCU/TitanATMEGA328P.X/debug/default/TitanATMEGA328P_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges" value="0-1ff"/>

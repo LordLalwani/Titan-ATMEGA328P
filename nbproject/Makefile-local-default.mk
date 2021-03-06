@@ -34,4 +34,4 @@ MP_AS_DIR="/Applications/microchip/avr/avr8-gnu-toolchain-darwin_x86_64/bin"
 MP_LD_DIR="/Applications/microchip/avr/avr8-gnu-toolchain-darwin_x86_64/bin"
 MP_AR_DIR="/Applications/microchip/avr/avr8-gnu-toolchain-darwin_x86_64/bin"
 # MP_BC_DIR is not defined
-DFP_DIR=/Applications/microchip/mplabx/v5.45/packs/Microchip/ATtiny_DFP/2.5.116
+DFP_DIR=/Users/s121003/.mchp_packs/Microchip/ATmega_DFP/2.3.126

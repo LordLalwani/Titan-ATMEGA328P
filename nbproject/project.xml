@@ -3,16 +3,18 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>TitanATTINY85</name>
+            <name>TitanATMEGA328P</name>
             <creation-uuid>62507043-e8ba-4b71-9614-8910b165ada4</creation-uuid>
             <make-project-type>0</make-project-type>
-            <c-extensions/>
-            <cpp-extensions>cpp</cpp-extensions>
-            <header-extensions/>
+            <c-extensions>c</c-extensions>
+            <cpp-extensions/>
+            <header-extensions>h</header-extensions>
             <asminc-extensions/>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>
-            <sourceRootList/>
+            <sourceRootList>
+                <sourceRootElem>externalLib</sourceRootElem>
+            </sourceRootList>
             <confList>
                 <confElem>
                     <name>default</name>

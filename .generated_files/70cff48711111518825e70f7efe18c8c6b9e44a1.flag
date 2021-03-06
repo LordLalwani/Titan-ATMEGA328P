@@ -1,0 +1,1 @@
+ $(MP_EXTRA_CC_PRE) -mmcu=atmega328p  -I "../../../../Downloads/avr8-gnu-toolchain-darwin_x86_64/avr/include"   -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) /Users/s121003/Development/personal/MCU/TitanATMEGA328P.X/debug-helpers.c
