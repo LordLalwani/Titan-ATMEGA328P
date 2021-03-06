@@ -1,1 +1,1 @@
-# Titan-attiny85
+# Titan-ATMEGA328P
